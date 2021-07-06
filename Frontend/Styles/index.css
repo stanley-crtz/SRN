@@ -1,15 +1,36 @@
-:root{
+:root {
     --background: rgb(22, 103, 253)
 }
 
-.login{
+.login {
     background-color: var(--background);
 }
 
-.center-all{
+.center-all {
     display: flex;
     width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
+}
+
+.active {
+    color: white;
+    transition: 1s
+}
+
+.list-group-item:hover {
+    cursor: pointer;
+    border: 1px solid rgb(161, 149, 149) !important;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+}
+
+.card-course{
+    background-color: rgba(22, 103, 253, 0.5);
 }

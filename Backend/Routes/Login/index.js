@@ -3,6 +3,6 @@ import Login from '../../Controllers/Login.js';
 
 const LoginRoutes = Express.Router();
 
-LoginRoutes.get('/SignIn',  Login.SignIn)
+LoginRoutes.post('/SignIn',  Login.SignIn)
 
 export default LoginRoutes;
