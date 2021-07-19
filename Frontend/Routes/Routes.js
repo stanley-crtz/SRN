@@ -17,6 +17,10 @@ Routes.get(
     )
 )
 
+// -------------------- Administrador -------------------
+
+// Courses
+
 Routes.get(
     '/Management',
     (req, res) => res.sendFile(
@@ -39,6 +43,22 @@ Routes.get(
 )
 
 Routes.get(
+    '/Management/Courses/:id/Edit',
+    (req, res) => res.sendFile(
+        SearchFiles.__Views('Management', 'Courses', 'Edit', 'index.html')
+    )
+)
+
+Routes.get(
+    '/Management/Courses/:id/Information',
+    (req, res) => res.sendFile(
+        SearchFiles.__Views('Management', 'Courses', 'Information', 'index.html')
+    )
+)
+
+// Teachers
+
+Routes.get(
     '/Management/Teachers',
     (req, res) => res.sendFile(
         SearchFiles.__Views('Management', 'Teachers', 'index.html')
@@ -59,6 +79,27 @@ Routes.get(
     )
 )
 
+// Students
 
+Routes.get(
+    '/Management/Students',
+    (req, res) => res.sendFile(
+        SearchFiles.__Views('Management', 'Students', 'index.html')
+    )
+)
+
+Routes.get(
+    '/Management/Students/Create',
+    (req, res) => res.sendFile(
+        SearchFiles.__Views('Management', 'Students', 'Create', 'index.html')
+    )
+)
+
+Routes.get(
+    '/Management/Students/:id/Edit',
+    (req, res) => res.sendFile(
+        SearchFiles.__Views('Management', 'Students', 'Edit', 'index.html')
+    )
+)
 
 export default Routes;

@@ -29,7 +29,7 @@ window.addEventListener('load', () => {
     $('#login').addEventListener('submit', e => {
         e.preventDefault();
 
-        __post('/api/SignIn', getInformation())
+        __post('/api/Users/SignIn', getInformation())
             .then(resp => {
                 if (resp.token) {
                     localStorage.setItem('token', resp.token);

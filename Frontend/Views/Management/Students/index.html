@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,34 +9,41 @@
     <script src="https://kit.fontawesome.com/d86c9a1724.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/index.css">
     <title>Management - SRN</title>
-
 </head>
-
 <body>
-
+    
     <div id="navbar"></div>
 
-    <!-- Content -->
+    <!-- content -->
 
     <div class="add-course">
         <input 
             id="add"
             type="button" 
             class="btn btn-primary form-control" 
-            value="Agregar"
+            value="Nuevo"
         >
     </div>
 
-    <div id="content-courses" class="flex-wrap"> </div>
-
+    <div class="table">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <td>Nombre</td>
+                    <td>DUI</td>
+                    <td>Correo</td>
+                    <td>Teléfono</td>
+                </tr>
+            </thead>
+            <tbody id="body-table">
+            </tbody>
+        </table>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/Management/Courses/index.js"></script>
-
+    <script src="/Management/Students/index.js"></script>
 </body>
-
 </html>

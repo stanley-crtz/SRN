@@ -18,7 +18,7 @@
 
     <!-- content -->
 
-    <h2 class="ms-3 mt-3 mb-3">Crea una nueva asignatura</h2>
+    <h2 class="ms-3 mt-3 mb-3">Edita asignatura</h2>
     <form class="form" id="courses-info">
         <div class="mb-3">
             <label for="name" class="form-label">Codigo de la asignatura</label>
@@ -36,9 +36,20 @@
         <div class="mb-3">
             <label for="name" class="form-label">Maestro Asignado</label>
             <div class="input-group">
-                <input type="text" class="form-control" id="teacher" placeholder="Juan Molina" autocomplete="off" required disabled>
+                <input type="text" class="form-control" id="teacher" placeholder="Juan Molina" autocomplete="off"
+                    required disabled>
                 <input type="text" id="idTeacher" required hidden>
-                <input type="button" id="search-teacher" value="..." class="form-control btn btn-light" style="max-width: 50px;">
+                <input type="button" id="search-teacher" value="..." class="form-control btn btn-light"
+                    style="max-width: 50px;">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="input-group">
+                <div class="input-group-text" id="btnGroupAddon2">¿Asignatura activa?</div>
+                <div class="input-group-text">
+                    <input class="form-check-input" type="checkbox" value="true" id="active">
+                </div>
             </div>
         </div>
         <div class="content-buttons">
@@ -77,7 +88,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/Management/Courses/Create/index.js"></script>
+    <script src="/Management/Courses/Edit/index.js"></script>
 
 </body>
 

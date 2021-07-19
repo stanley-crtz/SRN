@@ -33,7 +33,7 @@ function getData() {
 }
 
 const initLocation = () => {
-    window.location = '/Management/Teachers'
+    window.location = '/Management/Students/'
 }
 
 $('#cancel').on('click', initLocation)

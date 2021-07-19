@@ -10,6 +10,9 @@ switch (rute) {
     case "Teachers":
         items[1].className += " active"
         break;
+    case "Students":
+        items[2].className += " active"
+        break;
 
     default:
         break;
