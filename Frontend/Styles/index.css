@@ -129,3 +129,19 @@
   display: flex;
   justify-content: space-between;
 }
+
+.container-sign-out{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sign-out{
+  background-color: rgba(134, 134, 134, 0.2);
+  outline: none;
+  margin: 10px;
+  border: none;
+  width: 50px;
+  height: 40px;
+  border-radius: 10px;
+}

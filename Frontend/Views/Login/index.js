@@ -33,7 +33,9 @@ window.addEventListener('load', () => {
             .then(resp => {
                 if (resp.token) {
                     localStorage.setItem('token', resp.token);
-                    window.location = '/Management'
+                    localStorage.setItem('user', resp.typeUser);
+                    localStorage.setItem('userId', resp.id);
+                    window.location = `/${resp.typeUser}`
                 }
                 else {
                     myModal.show(modal);

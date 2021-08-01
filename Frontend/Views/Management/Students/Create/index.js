@@ -46,7 +46,7 @@ $('#teacher-info').on('submit', e => {
         body: JSON.stringify(data)
     }).then(resp => resp.json())
         .then(resp => {
-            $('#show-password').html(`<p>La contraseña generada por el sistema para el docente <strong>${data.name}</strong> es: <strong>${data.password}</strong> </p>`)
+            $('#show-password').html(`<p>La contraseña generada por el sistema para el estudiante <strong>${data.name}</strong> es: <strong>${data.password}</strong> </p>`)
             myModal.show(modal)
         })
         .catch(err => console.error(err))

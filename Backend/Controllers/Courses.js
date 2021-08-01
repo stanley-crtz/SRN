@@ -52,7 +52,7 @@ const CoursesController = {
             }
         )
     },
-    Update: ({body}, res) => {
+    Update: ({ body }, res) => {
 
         const { name, acronym, code, user, active, id } = body;
 
@@ -71,6 +71,25 @@ const CoursesController = {
             }
         )
     },
+    getCoursesByTeacher: ({ params }, res) => {
+
+        const { idTeacher } = params;
+
+        const query = 'SELECT * FROM Courses WHERE Courses.idUser = ? AND Courses.Active = true';
+
+        connect.query(
+            query,
+            [idTeacher],
+            (err, result) => {
+                if (err) return res.status(500).send({ msg: 'Server Error' });
+
+                return res.status(200).send({
+                    msg: 'Exito',
+                    result
+                });
+            }
+        )
+    }
 };
 
 export default CoursesController;

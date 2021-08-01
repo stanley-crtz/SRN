@@ -48,7 +48,7 @@ const getNotes = () => {
 
             for (const item of items) {
                 item.addEventListener('click', function () {
-                    alert('hey')
+                    window.location = `/Management/Courses/${this.dataset.note}/${ruteCurrent[3]}/Student`
                 })
             }
 
@@ -66,7 +66,7 @@ $(document).ready(function () {
 
             for (const el of result) {
                 body += `
-                    <tr data-identify="${el.idUser}" data-name="${el.Name}" class="value-student">
+                    <tr data-identify="${el.idUser}" data-name="${el.Name}" class="value-student-notes">
                         <td>${el.Name}</td>
                         <td>${el.DUI}</td>
                         <td>${el.Email}</td>
@@ -80,7 +80,7 @@ $(document).ready(function () {
         })
         .then(resp => $('#body-table').html(resp))
         .then(() => {
-            const items = document.querySelectorAll('.value-student');
+            const items = document.querySelectorAll('.value-student-notes');
 
             for (const item of items) {
                 item.addEventListener('click', function () {
@@ -96,18 +96,26 @@ $(document).ready(function () {
 
 $("#addStudent").on('click', () => {
 
-    const data = {
-        idUser: parseInt($("#idStudent").val()),
-        idCourses: parseInt(ruteCurrent[3])
+    if ($("#idStudent").val()) {
+        const data = {
+            idUser: parseInt($("#idStudent").val()),
+            idCourses: parseInt(ruteCurrent[3])
+        }
+    
+        fetch('/api/Notes/Create', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }).then(resp => resp.json())
+            .then(() => {
+                $("#idStudent").val('')
+                $("#Student").val('')
+                getNotes()
+            })
+            .catch(err => console.error(err))
+    } else {
+        alert('Seleccione un estudiante')
     }
-
-    fetch('/api/Notes/Create', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    }).then(resp => resp.json())
-        .then(() => getNotes())
-        .catch(err => console.error(err))
 })

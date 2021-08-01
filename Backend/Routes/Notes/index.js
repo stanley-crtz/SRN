@@ -7,5 +7,11 @@ NotesRoutes.get('/getNotes/:course', NotesController.getNotes)
 
 NotesRoutes.post('/Create', NotesController.create)
 
+NotesRoutes.get('/getNotesById/:id', NotesController.getNotesById)
+
+NotesRoutes.put('/updateNotes', NotesController.updateNotes)
+
+NotesRoutes.delete('/deleteNotes/:id', NotesController.deleteNotes)
+
 
 export default NotesRoutes;

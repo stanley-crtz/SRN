@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/d86c9a1724.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/index.css">
+    <title>Teacher - SRN</title>
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+
+    <div class="row">
+        <div class="col">
+            <h2 class="ms-3 mt-3 mb-3" id="title"></h2>
+        </div>
+    </div>
+
+    <div class="form m-3" id="courses-info">
+
+        <!-- Computo 1 -->
+        <div class="mb-3">
+            <label>Computo 1</label>
+            <div class="form">
+                <div class="row">
+                    <div class="col">
+                        <label>Laboratorio 1</label>
+                        <input type="text" class="form-control mt-2 mb-2 computo-1" placeholder="Nota" id="C1_L1">
+                    </div>
+                    <div class="col">
+                        <label>Laboratorio 2</label>
+                        <input type="text" class="form-control mt-2 mb-2 computo-1" placeholder="Nota" id="C1_L2">
+                    </div>
+                    <div class="col">
+                        <label>Parcial</label>
+                        <input type="text" class="form-control mt-2 mb-2 computo-1" placeholder="Nota" id="C1_P">
+                    </div>
+                    <div class="col">
+                        <label>Nota de computo</label>
+                        <input type="text" class="form-control mt-2 mb-2" placeholder="Nota" id="C1_Note" disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Computo 2 -->
+        <div class="mb-3">
+            <label>Computo 2</label>
+            <div class="form">
+                <div class="row">
+                    <div class="col">
+                        <label>Laboratorio 1</label>
+                        <input type="text" class="form-control mt-2 mb-2 computo-2" placeholder="Nota" id="C2_L1">
+                    </div>
+                    <div class="col">
+                        <label>Laboratorio 2</label>
+                        <input type="text" class="form-control mt-2 mb-2 computo-2" placeholder="Nota" id="C2_L2">
+                    </div>
+                    <div class="col">
+                        <label>Parcial</label>
+                        <input type="text" class="form-control mt-2 mb-2 computo-2" placeholder="Nota" id="C2_P">
+                    </div>
+                    <div class="col">
+                        <label>Nota de computo</label>
+                        <input type="text" class="form-control mt-2 mb-2" placeholder="Nota" id="C2_Note" disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Computo 3 -->
+        <div class="mb-3">
+            <label>Computo 3</label>
+            <div class="form">
+                <div class="row">
+                    <div class="col">
+                        <label>Laboratorio 1</label>
+                        <input type="text" class="form-control mt-2 mb-2 computo-3" placeholder="Nota" id="C3_L1">
+                    </div>
+                    <div class="col">
+                        <label>Laboratorio 2</label>
+                        <input type="text" class="form-control mt-2 mb-2 computo-3" placeholder="Nota" id="C3_L2">
+                    </div>
+                    <div class="col">
+                        <label>Parcial</label>
+                        <input type="text" class="form-control mt-2 mb-2 computo-3" placeholder="Nota" id="C3_P">
+                    </div>
+                    <div class="col">
+                        <label>Nota de computo</label>
+                        <input type="text" class="form-control mt-2 mb-2" placeholder="Nota" id="C3_Note" disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final -->
+        <div class="mb-3">
+            <label>Final</label>
+            <div class="form">
+                <div class="row">
+                    <div class="col">
+                        <label>Reposición</label>
+                        <input type="text" class="form-control mt-2 mb-2 reposicion" placeholder="Nota" id="Rep">
+                    </div>
+                    <div class="col">
+                        <label>Nota Final</label>
+                        <input type="text" class="form-control mt-2 mb-2" placeholder="Nota" id="Final" disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-buttons">
+            <div class="row">
+                <div class="col">
+                    <input type="button" id="cancel" class="btn btn-danger form-control" value="Cancelar">
+                </div>
+                <div class="col">
+                    <input type="button" id="submit" class="btn btn-success form-control" value="Guardar">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/Teacher/Courses/Notes/index.js"></script>
+
+</body>
+
+</html>

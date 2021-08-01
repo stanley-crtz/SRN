@@ -56,6 +56,13 @@ Routes.get(
     )
 )
 
+Routes.get(
+    '/Management/Courses/:id/:course/Student',
+    (req, res) => res.sendFile(
+        SearchFiles.__Views('Management', 'Courses', 'Notes', 'index.html')
+    )
+)
+
 // Teachers
 
 Routes.get(
@@ -102,4 +109,33 @@ Routes.get(
     )
 )
 
+// -------------------- Teachers -------------------
+
+Routes.get(
+    '/Teacher',
+    (req, res) => res.sendFile(
+        SearchFiles.__Views('Teacher', 'Courses', 'index.html')
+    )
+)
+
+Routes.get(
+    '/Teacher/Courses',
+    (req, res) => res.sendFile(
+        SearchFiles.__Views('Teacher', 'Courses', 'index.html')
+    )
+)
+
+Routes.get(
+    '/Teacher/Courses/:id/Information',
+    (req, res) => res.sendFile(
+        SearchFiles.__Views('Teacher', 'Courses', 'Information', 'index.html')
+    )
+)
+
+Routes.get(
+    '/Teacher/Courses/:id/:course/Student',
+    (req, res) => res.sendFile(
+        SearchFiles.__Views('Teacher', 'Courses', 'Notes', 'index.html')
+    )
+)
 export default Routes;

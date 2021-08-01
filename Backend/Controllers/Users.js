@@ -10,7 +10,7 @@ const Users = {
 
         if (!password) return res.status(500).send({ msg: 'Empty password' });
 
-        const query = 'SELECT * FROM Users WHERE Users.Email = ? AND Users.Password = ?';
+        const query = 'SELECT * FROM Users, TypeUsers WHERE Users.Email = ? AND Users.Password = ? AND Users.idTypeUser = TypeUsers.idTypeUser';
         connect.query(
             query,
             [email, password],
@@ -21,7 +21,9 @@ const Users = {
 
                 return res.status(200).send({
                     msg: 'Exito',
-                    token: createToken(result[0])
+                    token: createToken(result[0]),
+                    typeUser: result[0].TypeUser,
+                    id: result[0].idUser
                 });
             }
         )
