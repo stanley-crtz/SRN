@@ -10,4 +10,6 @@ UsersRoutes.put('/Update', UsersController.Update)
 
 UsersRoutes.delete('/Delete/:id', UsersController.Delete)
 
+UsersRoutes.put('/changePassword', UsersController.ChangePassword)
+
 export default UsersRoutes;

@@ -11,7 +11,9 @@ NotesRoutes.get('/getNotesById/:id', NotesController.getNotesById)
 
 NotesRoutes.put('/updateNotes', NotesController.updateNotes)
 
-NotesRoutes.delete('/deleteNotes/:id', NotesController.deleteNotes)
+NotesRoutes.delete('/deleteNotes/:id', NotesController.deleteNotes);
+
+NotesRoutes.get('/getNotesByStudent/:idStudent', NotesController.getNotesByStudent)
 
 
 export default NotesRoutes;

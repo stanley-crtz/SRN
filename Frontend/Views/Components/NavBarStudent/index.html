@@ -1,0 +1,39 @@
+
+
+<!-- NavBar -->
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <div class="d-flex" style="align-items: center;">
+            <button class="btn btn-primary me-2" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">
+                <i class="fas fa-bars"></i>
+            </button>
+            <label class="text-light" style="font-weight: bold; font-size: 25px;">SRN</label>
+        </div>
+    </div>
+</nav>
+
+<!-- Items Bar -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+    <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel">SRN</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body" style="padding: 0px;">
+        <ul class="list-group">
+            <li class="list-group-item m-2 p-2" style="border: none;" aria-current="true" data-rute="Notes">Notas</li>
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item m-2 p-2" style="border: none;" aria-current="true" data-rute="Profile">Mi Perfil</li>
+        </ul>
+    </div>
+    <div class="offcanvas-footer">
+        <div class="container-sign-out">
+            <button class="sign-out" id="sign-out">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="/Components/NavBarStudent/index.js"></script>

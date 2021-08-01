@@ -108,6 +108,29 @@ const NotesController = {
             }
         )
 
+    },
+    getNotesByStudent: ({ params }, res) => {
+
+        const { idStudent } = params
+
+        const date = new Date()
+
+        const year = date.getFullYear()
+
+        const query = 'SELECT Courses.Name AS Course, AcademicNotes.C1_L1, AcademicNotes.C1_L2, AcademicNotes.C1_P, AcademicNotes.C1_Note, AcademicNotes.C2_L1, AcademicNotes.C2_L2, AcademicNotes.C2_P, AcademicNotes.C2_Note, AcademicNotes.C3_L1, AcademicNotes.C3_L2, AcademicNotes.C3_P, AcademicNotes.C3_Note, AcademicNotes.Rep, AcademicNotes.Final FROM AcademicNotes, Courses, Users WHERE Users.idUser = AcademicNotes.idUser AND Courses.idCourses = AcademicNotes.idCourses AND AcademicNotes.Date = ? AND AcademicNotes.idUser = ? AND Courses.Active = true'
+
+        connect.query(
+            query,
+            [year, idStudent],
+            (err, result) => {
+                if (err) return res.status(500).send({ msg: 'Server Error' });
+
+                return res.status(200).send({
+                    msg: 'Exito',
+                    result
+                });
+            }
+        )
     }
 };
 

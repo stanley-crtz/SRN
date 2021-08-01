@@ -3,12 +3,10 @@ import SearchFiles from '../Class/SearchFiles.js';
 
 const Routes = Express.Router();
 
-// Routes.get(
-//     '/',
-//     (req, res) => res.sendFile(
-//         SearchFiles.__Views('index.html')
-//     )
-// )
+Routes.get(
+    '/',
+    (req, res) => res.redirect('/Login')
+)
 
 Routes.get(
     '/Login',
@@ -138,4 +136,35 @@ Routes.get(
         SearchFiles.__Views('Teacher', 'Courses', 'Notes', 'index.html')
     )
 )
+
+Routes.get(
+    '/Teacher/Profile',
+    (req, res) => res.sendFile(
+        SearchFiles.__Views('Teacher', 'User', 'index.html')
+    )
+)
+
+// -------------------- Students -------------------
+
+Routes.get(
+    '/Student',
+    (req, res) => res.sendFile(
+        SearchFiles.__Views('Student', 'Notes', 'index.html')
+    )
+)
+
+Routes.get(
+    '/Student/Notes',
+    (req, res) => res.sendFile(
+        SearchFiles.__Views('Student', 'Notes', 'index.html')
+    )
+)
+
+Routes.get(
+    '/Student/Profile',
+    (req, res) => res.sendFile(
+        SearchFiles.__Views('Student', 'User', 'index.html')
+    )
+)
+
 export default Routes;

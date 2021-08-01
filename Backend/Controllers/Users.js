@@ -50,7 +50,7 @@ const Users = {
             }
         )
     },
-    Update: ({body}, res) => {
+    Update: ({ body }, res) => {
 
         const { id, name, dui, address, phone, email, password } = body;
 
@@ -90,6 +90,28 @@ const Users = {
                 });
             }
         )
+    },
+    ChangePassword: ({ body }, res) => {
+        const { Password, id } = body;
+
+        const query = 'UPDATE Users SET Password = ? WHERE idUser = ?';
+
+        connect.query(
+            query,
+            [Password, id],
+            (err, result) => {
+                if (err) {
+                    console.log(err)
+                    return res.status(500).send({ msg: 'Server Error' })
+                };
+
+                return res.status(200).send({
+                    msg: 'Exito',
+                    result: result
+                });
+            }
+        )
+
     }
 };
 
