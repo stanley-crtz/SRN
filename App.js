@@ -23,5 +23,6 @@ App.use('/api/', RoutesBackend);
 
 App.use(Express.static(Path.join(Path.resolve(), 'Frontend', 'Views')));
 App.use(Express.static(Path.join(Path.resolve(), 'Frontend', 'Styles')));
+App.use(Express.static(Path.join(Path.resolve(), 'Frontend', 'Images')));
 
 export default App;
